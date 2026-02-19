@@ -1,18 +1,46 @@
-## Getting Started
+# Лабораторна робота №1: Перша програма на Java
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## 📝 Опис
 
-## Folder Structure
+Ознайомлення з базовими концепціями Java: типи даних, цикли, умовні оператори, роботою з класами та пакетами.
 
-The workspace contains two folders by default, where:
+## 🛠 Вимоги
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+- **Java Development Kit (JDK)**: версія 25 або вище
+- **Git**: для клонування репозиторію
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+## 📂 Архітектура
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+```
+src/
+├── App.java              # Точка входу
+├── models/               # Класи даних
+│   ├── Car.java
+│   └── User.java
+└── services/             # Бізнес-логіка
+    └── TaskService.java
+```
 
-## Dependency Management
+**models/** — класи-сутності з приватними полями та методами доступу.  
+**services/** — класи з логікою обробки даних.
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## 📋 Завдання
+
+1. **Арифметичні операції** — обчислення над масивом чисел
+2. **Робота з рядками** — конкатенація та оптимізація за допомогою `StringBuilder`
+3. **Математичні алгоритми** — реверс числа через операції `%` та `/`
+
+## 🚀 Запуск
+
+### Компіляція
+
+```bash
+cd Lab1
+javac -d bin src/**/*.java
+```
+
+### Виконання
+
+```bash
+java -cp bin App
+```
