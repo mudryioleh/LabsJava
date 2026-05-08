@@ -20,6 +20,8 @@ public class PhoneBookProgram {
         phoneBook.put("Мороз", "+380731234000");
         phoneBook.put("Поліщук", "+380681234321");
         phoneBook.put("Савченко", "+380951234888");
+        phoneBook.put("Gsdf", "+380951234888");
+
 
         System.out.println("Вміст книги:");
         for (Map.Entry<String, String> entry : phoneBook.entrySet()) {
@@ -32,6 +34,10 @@ public class PhoneBookProgram {
 
         if (phoneBook.containsKey(lastName)) {
             String phone = phoneBook.get(lastName);
+                
+            phoneBook.keySet().stream().filter(key -> phoneBook.get(key).equals(phone))
+              .forEach(key -> System.out.println("Прізвище для номера \"" + phone + "\": " + key));
+
             System.out.println("Номер для \"" + lastName + "\": " + phone);
         } else {
             System.out.println("У книзі відсутній такий абонент");

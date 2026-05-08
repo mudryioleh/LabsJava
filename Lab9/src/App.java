@@ -1,8 +1,8 @@
 public class App {
     public static void main(String[] args) throws Exception {
         javax.swing.SwingUtilities.invokeLater(() -> {
-            HeatCalculatorView view = new HeatCalculatorView();
-            new HeatCalculatorController(view);
+            SpringCalculatorView view = new SpringCalculatorView();
+            new SpringCalculatorController(view);
             view.setVisible(true);
         });
     }
